@@ -1,0 +1,79 @@
+<!--
+@license
+Copyright (c) 2015 The expand.js authors. All rights reserved.
+This code may only be used under the BSD style license found at https://expandjs.github.io/LICENSE.txt
+The complete set of authors may be found at https://expandjs.github.io/AUTHORS.txt
+The complete set of contributors may be found at https://expandjs.github.io/CONTRIBUTORS.txt
+-->
+
+<!--
+This component is used to display a material toolbar.
+
+@component mat-toolbar
+@description This component is used to display a material toolbar.
+
+@dependency polymer Polymer/polymer#^0.5
+@dependency expandjs ExpandJS/expandjs
+@dependency mat-paper ExpandJS/mat-paper
+
+@devDependency mat-demo ExpandJS/mat-demo
+@devDependency mat-icon-button ExpandJS/mat-icon-button
+@devDependency mat-menu ExpandJS/mat-menu
+@devDependency mat-option ExpandJS/mat-option
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../expandjs/expandjs.html">
+<link rel="import" href="../mat-paper/mat-paper.html">
+
+<polymer-element name="mat-toolbar" constructor="MATToolbarElement" attributes="background">
+
+    <template>
+        <style>
+            :host {
+                display: block;
+                height: 48px;
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            :host #matToolbarWrapper {
+                height: 100%;
+                padding: 0 4px;
+                overflow: visible;
+            }
+        </style>
+        <mat-paper id="matToolbarWrapper" background="{{background}}" brightness="toolbar" z="{{raised ? 1 : 0}}" horizontal layout center>
+            <content id="content"></content>
+        </mat-paper>
+    </template>
+
+    <script>
+        XPComponent({
+
+            // PUBLISH
+            publish: {
+
+                /**
+                 * The paper's background color.
+                 *
+                 * @attribute background
+                 * @type string
+                 * @default ""
+                 */
+                background: {reflect: true, value: ''},
+
+                /**
+                 * If set to true, the panel is raised.
+                 *
+                 * @attribute raised
+                 * @type boolean
+                 * @default false
+                 */
+                raised: {reflect: true, value: false}
+            }
+        });
+    </script>
+
+</polymer-element>
