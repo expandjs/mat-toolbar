@@ -1,8 +1,8 @@
 {
   "name": "mat-toolbar",
   "license": "BSD-3-Clause",
-  "version": "0.8.4",
-  "description": "This element is used to display a material toolbar.",
+  "version": "0.8.5",
+  "description": "A custom element used to display a Material Design toolbar",
   "homepage": "http://www.expandjs.com/elements/mat-toolbar",
   "authors": [
     "Giuliano Rullo <g.rullo@expandjs.com>",
