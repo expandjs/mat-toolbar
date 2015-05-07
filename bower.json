@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "mat-demo": "ExpandJS/mat-demo",
-    "mat-icon-button": "ExpandJS/mat-icon-button",
     "mat-menu": "ExpandJS/mat-menu",
+    "mat-menu-button": "ExpandJS/mat-menu-button",
     "mat-option": "ExpandJS/mat-option"
   }
 }
