@@ -36,15 +36,16 @@ This element is used to display a material toolbar.
             :host {
                 display: block;
                 height: 48px;
+                overflow: visible;
                 text-align: left;
-                text-overflow: ellipsis;
-                white-space: nowrap;
             }
 
             :host #matToolbarWrapper {
                 height: 100%;
                 padding: 0 4px;
-                overflow: visible;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
         </style>
         <mat-paper id="matToolbarWrapper" background="{{background}}" brightness="toolbar" z="{{raised ? 1 : 0}}" horizontal layout center>
