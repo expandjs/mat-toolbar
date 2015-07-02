@@ -45,6 +45,10 @@ This element is used to display a material toolbar.
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+
+        :host([justified]) #matToolbarWrapper {
+            @apply(--layout-around-justified);
+        }
     </style>
 
     <template>
@@ -77,7 +81,20 @@ This element is used to display a material toolbar.
                 },
 
                 /**
-                 * If set to true, the panel is raised.
+                 * If set to true, the toolbar's layout is justified.
+                 *
+                 * @attribute justified
+                 * @type boolean
+                 * @default false
+                 */
+                justified: {
+                    reflectToAttribute: true,
+                    type: Boolean,
+                    value: false
+                },
+
+                /**
+                 * If set to true, the toolbar is raised.
                  *
                  * @attribute raised
                  * @type boolean
