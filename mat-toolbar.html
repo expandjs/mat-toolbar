@@ -47,8 +47,24 @@ This element is used to display a material toolbar.
             white-space: nowrap;
         }
 
-        :host([justified]) #matToolbarWrapper {
+        :host([justified="around"]) #matToolbarWrapper {
             @apply(--layout-around-justified);
+        }
+
+        :host([justified="center"]) #matToolbarWrapper {
+            @apply(--layout-center-justified);
+        }
+
+        :host([justified="end"]) #matToolbarWrapper {
+            @apply(--layout-end-justified);
+        }
+
+        :host([justified="normal"]) #matToolbarWrapper {
+            @apply(--layout-justified);
+        }
+
+        :host([justified="start"]) #matToolbarWrapper {
+            @apply(--layout-start-justified);
         }
     </style>
 
@@ -82,16 +98,14 @@ This element is used to display a material toolbar.
                 },
 
                 /**
-                 * If set to true, the toolbar's layout is justified.
+                 * The toolbar justified alignment.
                  *
                  * @attribute justified
-                 * @type boolean
-                 * @default false
+                 * @type "around" | "center" | "end" | "normal" | "start"
                  */
                 justified: {
                     reflectToAttribute: true,
-                    type: Boolean,
-                    value: false
+                    type: String
                 },
 
                 /**
