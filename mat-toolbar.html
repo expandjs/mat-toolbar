@@ -7,7 +7,35 @@ The complete set of contributors may be found at https://expandjs.github.io/CONT
 -->
 
 <!--
-This element is used to display a material toolbar.
+An element used to display a [Material Design toolbar](http://www.google.com/design/spec/layout/structure.html#structure-toolbars).
+
+```html
+<mat-toolbar>
+    <span>Lorem ipsum...</span>
+</mat-toolbar>
+```
+
+The toolbar comes with a set of content alignments, accessible via `justified`.
+
+```html
+<mat-toolbar justified="around">
+    <mat-icon-button icon="content:undo"></mat-icon-button>
+    <mat-icon-button icon="action:home"></mat-icon-button>
+    <mat-icon-button icon="content:send"></mat-icon-button>
+</mat-toolbar>
+```
+
+---
+
+## Styling
+
+The toolbar's background color can be changed accordingly to the [Material Design palette](http://www.google.com/design/spec/style/color.html#color-color-palette).
+
+```html
+<mat-toolbar background="indigo">
+    <span>Lorem ipsum...</span>
+</mat-toolbar>
+```
 
 @element mat-toolbar
 @description A custom element used to display a Material Design toolbar
@@ -16,9 +44,9 @@ This element is used to display a material toolbar.
 @homepage http://expandjs.com/elements/mat-toolbar
 
 @dependency polymer Polymer/polymer#^1.0.0
-@dependency expandjs ExpandJS/expandjs#0.9.4
+@dependency expandjs ExpandJS/expandjs#0.9.5
 @dependency iron-flex-layout PolymerElements/iron-flex-layout#^1.0.0
-@dependency mat-paper ExpandJS/mat-paper#0.9.4
+@dependency mat-paper ExpandJS/mat-paper#0.9.5
 -->
 
 <link rel="import" href="../polymer/polymer.html">
