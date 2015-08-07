@@ -1,7 +1,7 @@
 {
   "name": "mat-toolbar",
   "license": "BSD-3-Clause",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "A custom element used to display a Material Design toolbar",
   "homepage": "http://expandjs.com/elements/mat-toolbar",
   "authors": [
@@ -24,8 +24,8 @@
     "**/.*"
   ],
   "dependencies": {
-    "expandjs": "ExpandJS/expandjs#0.9.5",
-    "mat-paper": "ExpandJS/mat-paper#0.9.5",
+    "expandjs": "ExpandJS/expandjs#0.9.6",
+    "mat-paper": "ExpandJS/mat-paper#0.9.6",
     "polymer": "Polymer/polymer#^1.0.0",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0"
   }
