@@ -57,48 +57,50 @@ The toolbar's background color can be changed accordingly to the [Material Desig
 
 <dom-module id="mat-toolbar">
 
-    <style>
-        :host {
-            @apply(--mat-font-subhead);
-            display: block;
-            height: 48px;
-            overflow: visible;
-            text-align: left;
-        }
-
-        :host #matToolbarWrapper {
-            @apply(--layout-horizontal);
-            @apply(--layout-center);
-            height: 100%;
-            overflow: visible;
-            padding: 0 4px;
-        }
-
-        :host([justified="around"]) #matToolbarWrapper {
-            @apply(--layout-around-justified);
-        }
-
-        :host([justified="center"]) #matToolbarWrapper {
-            @apply(--layout-center-justified);
-        }
-
-        :host([justified="end"]) #matToolbarWrapper {
-            @apply(--layout-end-justified);
-        }
-
-        :host([justified="normal"]) #matToolbarWrapper {
-            @apply(--layout-justified);
-        }
-
-        :host([justified="start"]) #matToolbarWrapper {
-            @apply(--layout-start-justified);
-        }
-    </style>
-
     <template>
+
+        <style>
+            :host {
+                @apply(--mat-font-subhead);
+                display: block;
+                height: 48px;
+                overflow: visible;
+                text-align: left;
+            }
+
+            :host #matToolbarWrapper {
+                @apply(--layout-horizontal);
+                @apply(--layout-center);
+                height: 100%;
+                overflow: visible;
+                padding: 0 4px;
+            }
+
+            :host([justified="around"]) #matToolbarWrapper {
+                @apply(--layout-around-justified);
+            }
+
+            :host([justified="center"]) #matToolbarWrapper {
+                @apply(--layout-center-justified);
+            }
+
+            :host([justified="end"]) #matToolbarWrapper {
+                @apply(--layout-end-justified);
+            }
+
+            :host([justified="normal"]) #matToolbarWrapper {
+                @apply(--layout-justified);
+            }
+
+            :host([justified="start"]) #matToolbarWrapper {
+                @apply(--layout-start-justified);
+            }
+        </style>
+
         <mat-paper id="matToolbarWrapper" background="[[background]]" brightness="toolbar" z="[[_computeZ(raised)]]">
             <content id="content"></content>
         </mat-paper>
+
     </template>
 
     <script>
