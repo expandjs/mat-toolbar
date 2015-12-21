@@ -78,7 +78,6 @@ The toolbar's background color can be changed accordingly to the [Material Desig
                 @apply(--layout-center);
                 box-sizing: border-box;
                 height: 100%;
-                padding: 0 4px;
             }
 
             :host .wrapper ::content > .label {
@@ -89,7 +88,15 @@ The toolbar's background color can be changed accordingly to the [Material Desig
             }
 
             :host .wrapper ::content > .label:first-child {
-                padding-left: 12px;
+                padding-left: 16px;
+            }
+
+            :host .wrapper ::content > .button:first-child {
+                margin-left: 8px;
+            }
+
+            :host .wrapper ::content > .button:last-child {
+                margin-right: 8px;
             }
 
             /* ALIGNMENT */
