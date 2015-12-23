@@ -83,8 +83,8 @@ The toolbar's background color can be changed accordingly to the [Material Desig
             :host .wrapper ::content > .label {
                 @apply(--layout-flex);
                 overflow: hidden;
-                text-overflow: ellipsis !important;
-                white-space: nowrap !important;
+                text-overflow: ellipsis !important; /* override */
+                white-space: nowrap !important; /* override */
             }
 
             :host .wrapper ::content > .label:first-child {
@@ -101,11 +101,11 @@ The toolbar's background color can be changed accordingly to the [Material Desig
 
             /* ALIGNMENT */
 
-            :host([justified=""]) .wrapper       { @apply(--layout-justified); }
-            :host([justified="around"]) .wrapper { @apply(--layout-around-justified); }
-            :host([justified="center"]) .wrapper { @apply(--layout-center-justified); }
-            :host([justified="end"]) .wrapper    { @apply(--layout-end-justified); }
-            :host([justified="start"]) .wrapper  { @apply(--layout-start-justified); }
+            :host([justified="between"]) .wrapper { @apply(--layout-justified); }
+            :host([justified="around"]) .wrapper  { @apply(--layout-around-justified); }
+            :host([justified="center"]) .wrapper  { @apply(--layout-center-justified); }
+            :host([justified="end"]) .wrapper     { @apply(--layout-end-justified); }
+            :host([justified="start"]) .wrapper   { @apply(--layout-start-justified); }
 
         </style>
 
@@ -146,7 +146,7 @@ The toolbar's background color can be changed accordingly to the [Material Desig
                  * The toolbar's alignment.
                  *
                  * @attribute justified
-                 * @type "around" | "center" | "end" | "start"
+                 * @type "around" | "between" | "center" | "end" | "start"
                  */
                 justified: {
                     reflectToAttribute: true,
